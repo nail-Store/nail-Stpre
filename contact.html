@@ -1,1 +1,208 @@
-oil
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ติดต่อเรา | ร้านทำเล็บ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7ff 0%, #66ccff 100%);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 520px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 22px;
+            box-shadow: 0 6px 32px rgba(220, 120, 180, 0.13);
+            padding: 0 36px 36px 36px;
+        }
+        .shop-name {
+            text-align: center;
+            font-size: 2.3rem;
+            color: #2299cc;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 32px;
+        }
+        .banner-img {
+            width: 320px;
+            height: 320px;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 2px 12px rgba(220,120,180,0.10);
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+        .logo-img {
+            display: block;
+            margin: 0 auto 16px auto;
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: #e0f7ff;
+            box-shadow: 0 2px 8px rgba(220,120,180,0.10);
+        }
+        h1 {
+            color: #2299cc;
+            text-align: center;
+            margin-bottom: 18px;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 32px;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .info .icons {
+            margin: 12px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        .info .icons a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #e0f7ff;
+            box-shadow: 0 1px 4px rgba(220,120,180,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .info .icons a:hover {
+            background: #66ccff;
+        }
+        .info .icons img {
+            width: 22px;
+            height: 22px;
+            display: block;
+        }
+        .address {
+            margin-top: 12px;
+            font-weight: bold;
+            color: #2299cc;
+        }
+        .map-container {
+            margin: 32px 0 24px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(220,120,180,0.08);
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2299cc;
+            font-weight: bold;
+            text-align: left;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #66ccff;
+            border-radius: 9px;
+            font-size: 1rem;
+            background: #e0f7ff;
+            box-sizing: border-box;
+        }
+        form textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        form button {
+            background: linear-gradient(90deg, #2299cc 60%, #66ccff 100%);
+            color: #fff;
+            border: none;
+            padding: 14px 0;
+            border-radius: 9px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(220, 120, 180, 0.10);
+            transition: background 0.2s;
+        }
+        form button:hover {
+            background: linear-gradient(90deg, #66ccff 60%, #2299cc 100%);
+        }
+        .open-hours {
+            text-align: center;
+            margin-top: 36px;
+            color: #2299cc;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 6px 24px 6px;
+            }
+            .banner-img {
+                width: 180px;
+                height: 180px;
+            }
+            .shop-img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shop-name">Nail Store</div>
+        <img src="https://down-th.img.susercontent.com/file/eb82cb11cbc2e61a1fce911c7cf2a8d7_tn.webp" 
+             class="banner-img" alt="ร้านทำเล็บ Banner">
+        <img src="https://marketplace.canva.com/EAGPuXmKBko/1/0/1600w/canva-%E0%B8%AA%E0%B8%B5%E0%B8%8A%E0%B8%A1%E0%B8%9E%E0%B8%B9-%E0%B8%AA%E0%B8%B5%E0%B8%82%E0%B8%B2%E0%B8%A7-%E0%B8%AA%E0%B9%84%E0%B8%95%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%A1%E0%B8%AD%E0%B8%A5-%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99-%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%87%E0%B8%B2%E0%B8%A1-%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B3%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%9A-%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88-%E0%B9%82%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B9%89-GI1wL6sM2uI.jpg" alt="โลโก้ร้านทำเล็บ" class="logo-img">
+        <h1>ติดต่อเรา</h1>
+        <div class="info">
+            <div>
+                โทร: <a href="tel:0812345678">081-234-5678</a>
+            </div>
+            <div class="icons">
+                <a href="https://line.me/R/ti/p/@nailstore" target="_blank" title="Line">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111498.png" alt="Line">
+                </a>
+                <a href="https://facebook.com/nailstore" target="_blank" title="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                </a>
+                <a href="mailto:info@nailstore.com" target="_blank" title="Email">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                </a>
+            </div>
+            <div class="address">
+                123/45 ถนนสุขุมวิท แขวงคลองตันเหนือ เขตวัฒนา กรุงเทพฯ 10110
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.731235956478!2d100.5639653153342!3d13.74408310134801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29edb8e6b7b8b%3A0x7e5f6e6b7b8b7b8b!2zU3VraHVtaXRfUm9hZCBTdWtodW1pdCBTdWtodW1pdCBTdWtodW1pdA!5e0!3m2!1sth!2sth!4v1710000000000!5m2!1sth!2sth"
+                width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <form>
+            <label for="name">ชื่อของคุณ</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">อีเมล</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">ข้อความ</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+        <div class="open-hours">
+            เวลาทำการ: ทุกวัน 10:00 - 20:00 น.
+        </div>
+    </div>
+</body>
+</html>
