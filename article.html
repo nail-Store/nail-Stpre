@@ -1,1 +1,327 @@
-supawadee
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nail Store | เล็บสวยหรู ดูดี</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background: linear-gradient(120deg, #e0f7ff 0%, #66ccff 100%);
+      margin: 0;
+      padding: 0;
+      color: #22577a;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 48px auto;
+      background: #fff;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(102, 204, 255, 0.18);
+      padding: 56px 40px 40px 40px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #66ccff;
+      position: relative;
+      background: linear-gradient(120deg, #fafdff 60%, #e0f7ff 100%);
+      box-shadow: 0 12px 48px 0 #66ccff33, 0 1.5px 0 #66ccff;
+      border: 2.5px solid #66ccff;
+      overflow: visible;
+    }
+    .store-name {
+      display: block;
+      text-align: center;
+      font-size: 2.2rem; /* เพิ่มขนาดตัวอักษร */
+      font-weight: bold;
+      color: #2299dd;
+      margin-bottom: 18px;
+      letter-spacing: 3px;
+      background: linear-gradient(90deg,#e0f7ff,#66ccff 80%);
+      padding: 16px 0;
+      border-radius: 28px;
+      box-shadow: 0 2px 16px rgba(102,204,255,0.15);
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2.5px solid #66ccff;
+      transition: font-size 0.2s;
+    }
+    h1 {
+      text-align: center;
+      color: #2299dd;
+      margin-bottom: 16px;
+      font-size: 2rem; /* ปรับขนาดให้เล็กลง */
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      background: linear-gradient(90deg,#2299dd,#66ccff 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .article-meta {
+      text-align: center;
+      color: #2299dd;
+      font-size: 1.08rem;
+      margin-bottom: 36px;
+      letter-spacing: 1px;
+    }
+    .cover {
+      max-width: 420px;
+      height: auto;
+      display: block;
+      margin: 0 auto 38px auto;
+      border-radius: 22px;
+      box-shadow: 0 4px 24px rgba(102, 204, 255, 0.18);
+      border: 5px solid #66ccff;
+      transition: box-shadow 0.3s, transform 0.2s;
+      margin-bottom: 44px;
+    }
+    .cover:hover {
+      box-shadow: 0 16px 48px #2299dd44, 0 0 0 12px #e0f7ff;
+      transform: scale(1.03) rotate(-1deg);
+    }
+    .divider {
+      width: 120px;
+      height: 6px;
+      background: linear-gradient(90deg,#66ccff,#2299dd 80%);
+      border-radius: 3px;
+      margin: 36px auto 32px auto;
+      opacity: 0.7;
+      box-shadow: 0 2px 8px #66ccff33;
+    }
+    .section {
+      margin-bottom: 36px;
+    }
+    p {
+      line-height: 1.95;
+      font-size: 1.18rem;
+      margin-bottom: 22px;
+      text-align: justify;
+    }
+    .gallery {
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #66ccff22;
+      border: 3px solid #66ccff;
+      transition: transform 0.22s, box-shadow 0.22s, filter 0.22s;
+      background: linear-gradient(135deg, #e0f7ff 60%, #fff 100%);
+    }
+    .gallery img:hover {
+      transform: scale(1.12) rotate(-2deg);
+      box-shadow: 0 16px 48px #2299dd33;
+      border-color: #2299dd;
+      filter: brightness(1.08) saturate(1.2);
+      z-index: 2;
+    }
+    .highlight {
+      background: linear-gradient(90deg, #e3f6fd 80%, #fff 100%);
+      border-left: 6px solid #66ccff;
+      padding: 18px 28px 18px 38px;
+      margin: 36px 0;
+      border-radius: 14px;
+      color: #2299dd;
+      font-style: italic;
+      font-size: 1.15rem;
+      box-shadow: 0 2px 16px #66ccff11;
+      position: relative;
+      font-weight: 500;
+    }
+    .highlight:before {
+      content: "💡";
+      position: absolute;
+      left: 14px;
+      top: 16px;
+      font-size: 1.4rem;
+      opacity: 0.8;
+      filter: drop-shadow(0 2px 2px #fff);
+    }
+    .highlight.purple {
+      background: linear-gradient(90deg, #f3e6fa 80%, #fff 100%);
+      border-left: 6px solid #b388ff;
+      color: #5e35b1;
+    }
+    .trend-list {
+      margin: 12px 0 0 18px;
+      padding: 0;
+      font-size: 1.08rem;
+    }
+    .trend-list li {
+      margin-bottom: 10px;
+      line-height: 1.8;
+      padding-left: 2px;
+    }
+    .recommend {
+      background: linear-gradient(90deg, #e0f7ff 0%, #66ccff 100%);
+      border-radius: 22px;
+      padding: 32px 38px;
+      margin-top: 54px;
+      box-shadow: 0 4px 24px #66ccff22;
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      border: 2px solid #66ccff;
+      position: relative;
+      overflow: visible;
+    }
+    .recommend:before {
+      content: "⭐";
+      position: absolute;
+      left: 22px;
+      top: 22px;
+      font-size: 2.2rem;
+      opacity: 0.13;
+      z-index: 1;
+    }
+    .recommend img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 18px #66ccff33;
+      border: 3px solid #fff;
+      background: #fff;
+      flex-shrink: 0;
+      z-index: 2;
+      transition: transform 0.2s;
+    }
+    .recommend img:hover {
+      transform: scale(1.08) rotate(2deg);
+      box-shadow: 0 8px 32px #2299dd33;
+    }
+    .recommend-content {
+      flex: 1;
+      z-index: 2;
+    }
+    .recommend-title {
+      color: #2299dd;
+      font-weight: bold;
+      font-size: 1.28rem;
+      margin-bottom: 12px;
+      letter-spacing: 1.2px;
+      text-shadow: 0 1px 0 #fff;
+    }
+    /* Bubble decorations */
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.13;
+      z-index: 0;
+      pointer-events: none;
+      animation: float 12s infinite alternate;
+      filter: blur(1.5px);
+    }
+    .bubble1 { width: 140px; height: 140px; background: #66ccff; left: -70px; top: 60px; animation-delay: 0s;}
+    .bubble2 { width: 90px; height: 90px; background: #2299dd; right: -45px; top: 200px; animation-delay: 2s;}
+    .bubble3 { width: 70px; height: 70px; background: #e0f7ff; left: 60px; bottom: 80px; animation-delay: 4s;}
+    .bubble4 { width: 110px; height: 110px; background: #66ccff; right: 40px; bottom: -60px; animation-delay: 6s;}
+    @keyframes float {
+      0% { transform: translateY(0) scale(1);}
+      100% { transform: translateY(-30px) scale(1.08);}
+    }
+    /* เพิ่มเอฟเฟกต์ fade-in */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        padding: 18px 6px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      .gallery img {
+        width: 110px;
+        height: 130px;
+      }
+      .recommend {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 10px;
+      }
+      .recommend img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+      }
+      .store-name {
+        font-size: 1.3rem;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bubble bubble1"></div>
+  <div class="bubble bubble2"></div>
+  <div class="bubble bubble3"></div>
+  <div class="bubble bubble4"></div>
+  <div class="container fade-in">
+    <span class="store-name">Nail Store</span>
+    <h1>เล็บสวยหรู ดูดี เทรนด์ใหม่ 2025</h1>
+    <!-- ลบ .article-meta ที่มีชื่อและวันที่ออก -->
+    <img class="cover" src="https://img.sistacafe.com/resizer?url=sistacafe-assets:____%2Fc%2F93779%2Fthumbnail.jpeg?v=20240301172115&w=275" alt="ปกบทความเล็บสวย">
+    <div class="divider"></div>
+    <div class="section">
+      <p>
+        ปี 2025 นี้ วงการเล็บยังคงเต็มไปด้วยสีสันและดีไซน์ใหม่ๆ ที่ตอบโจทย์ทุกไลฟ์สไตล์ ไม่ว่าจะเป็นสาวหวาน สาวเท่ หรือสายแฟชั่นจ๋า เทรนด์หลักยังคงเน้นความหรูหราแต่ดูสบายตา โทนสีพาสเทล สีชมพูอ่อน สีขาวมุก และการตกแต่งด้วยกลิตเตอร์หรือคริสตัลเล็กๆ ช่วยให้เล็บดูโดดเด่นแต่ไม่ฉูดฉาดจนเกินไป
+      </p>
+      <p>
+        “เล็บสุขภาพดี” ยังคงเป็นคีย์เวิร์ดสำคัญ สาวๆ นิยมบำรุงเล็บให้แข็งแรง เงางาม และเลือกใช้สีที่ดูสะอาดตา เช่น สีเบจ สีชมพูใส หรือสีขาวมุก เพื่อโชว์ความเป็นธรรมชาติและดูแพงในทุกโอกาส
+      </p>
+      <p>
+        ลายเล็บแนวศิลปะ (Art Nails) ก็มาแรงมาก ไม่ว่าจะเป็นลายเส้นกราฟิก ลายวาดมือ หรือการผสมผสานสีสันแบบ Color Block ที่ช่วยเพิ่มความสนุกและความโดดเด่นให้กับปลายนิ้ว เหมาะกับสายแฟชั่นที่ชอบความแตกต่าง
+      </p>
+      <p>
+        สำหรับสาวๆ ที่ชอบความหรูหรา เล็บโฮโลแกรมและเมทัลลิคก็ยังคงได้รับความนิยมอย่างต่อเนื่อง สีสะท้อนแสงหรือสีเงิน-ทองเมทัลลิคช่วยให้มือดูโดดเด่นในทุกแสงไฟ เหมาะกับงานปาร์ตี้หรือโอกาสพิเศษ
+      </p>
+      <div class="gallery">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExIVFhUVFRcVGBcXFRUVFRgXFxUWFxUYFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0fICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLf/AABEIAOAA4QMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQYAB//EAD0QAAEEAAMFBQUHAgUFAAAAAAEAAgMRBCExBRJBUWEicYGRoROxwdHwBiMyQlJi4XLxFBUkkqIHM4Kywv/EABkBAAMBAQEAAAAAAAAAAAAAAAECAwAEBf/EACURAAICAgMAAAYDAAAAAAAAAAABAhEDIRIxQQQiMlFhcRNCkf/aAAwDAQACEQMRAD8A6hS1VtS0rmOsKArhUCsEAFt1QWqVNLGAuYhujTW6qliJjNxEIIRfs/s+nl500HxRJI7NLZwkIa0BYMUM0vN1VURiBbwI1yneVbQ3SAarCVZ7EZC0AElRLNeunL5rzMSwEWt30WWJ1dDkMIyTQACUJtu+w5Xn0XmT3ksvleyLTfQeSbolJc1Z5UAhB7MlRk7Vb2CuUhcSV1213dk9y5rDwZpombpDEMaviZQxpPHQd6uSGgk6AWucnxLpDvE5cByCoyF2MNeeaIHpNsg5q4eOaXYRwOU7yTEg5q3+JaNSibY14ryW/wAYzmPNeWo2zeZICiNck5YHsOmSJC4ngi4NAjNDzXIjQk4nptjlIoggCsAqWiNQsx4hVKuhSFawM9A23dy1Ikjgm5Wm2lErGOgpK81UDldYeiS7kgYlwb1d9eSZhGp5BI4OO5W73Egm+I1RSvQ+JJXJ+HjgJXDeDDXgPIJqTCCOFthrXEW5zqOpyGa2cZMWboa2RxLm5N3cwTuuJLqAa2w45g5Crujk7WbC5zHvf2NRR7Luljh1HXmrKHEgvi5ZJKNf4YuFxlEgEhpJruvIFaDXLL2ztNjiGsDKH6RVeKchfbAVHIjoydKVUNGRVdNSRnxjW8VmTY4uNBIkQYxjcRvk1okmTtBr14JXbBc1mRo6/wAFAwGKEjA4ajUe8JlJXSGeJ8eTNXGnskdD7lzr28Bot2U2O8LNbh10R2cbdMzjh7ScuFdnquhbCjCEck60K5s4pmEeS4bx6ZoH+WvPE+ZXdOwg1VRhgqqQvI4X/K39fMqV33+HbyXkebNZ1ph5i0MYVozGVp0tVSD3oMmZ+JwAdmMilRGW6rZVXx3qFKeNMpHI0ZW8isK9i8MQbGirGVySi0dMZJoK4oWqI4WiNhyQSs1l4MhSYjjtBZoEZ0rt7siwPL0T1Z0wjoieIjihw4ngdV7Gyv3XkijbcgMuPBZceIsb3Fpz+u4pZ/Ky0cfKJu4eYWRwKU2lGR4ad1k/H1XoO0LBsHQ/FUxZIBBNrbq0bHCpWN4b7QAM3ZAd5oydV8Kz4grnNvbXMpAqmtvM1Z+SpjJHhu8GF1mss8/DNZLtl4mY/wDafX7huD/lVoPM3pF8fw+GEufQTDSh7v2jU8+g+a0cRtMuIjiaSQKAaCcvBMYH7LFoBmcQP0sqvFxz8h4rpNn4eJjd2JoaONak/uJzPitt9nPnyRk9bOawf2emfnK4MHL8TvkFss2fHG2mjvJzce8rSdklpyic92c1tjCXmubbH7J+8L3XfiHI811+0DQWDO0HuKVrZ0wl8teBY5L00V3R8QksM0tO7w4FaDCunGzzc8aegRavNCM5ijcVjnJjUSRqWCirv0WABteV7UrUE7Fw5KufJFXqTCAcu5TVKzmjiF5jhosYE6K1nz4UjRa3swcwUljJc93lqpZKrZXHd6A4ePiUSVprK15rqRJsaA2i1c1pHoY8LlsAx+g48uKHJOWOI+s1GFlD3WOF+8K20SWuzaCDmCQR6g5rQl6dUYqMuDRXF7SIidrq0a9HLEiJ9k936rr3LSxTwYiNxtl7aHb4B37uoVfYU2Nh/U2/F1lbM2ykVGF0q2PwsDA1jTdNrPoEDGSNEZcT2uV5k8qRdynWOfxS2MizOXNPWjQlFyojAOLoyOTvorXwU7nRmm5j8RrM0RQGehorL2Q3sP8A6h7h9eKa2cxxieWuJJe5m6KvUHj0dw5qcNNE88Ytv9mltKR8rWlgDW0bs8chWWmqy4ZCWtc3JzbB6kHQ+C2MLCwR040+gD2swTmPxZB2SwtkuylB13r+Hdw9VScVaIYuLjJLw1YsSJGbwy4EciNQlp0lhJdyRw4PFj+ofxfkFbFYilJMWUKdGZtd+VWsDDup1HRP7Ql3jqkHNKJWGlRoFuSJCULCDeARTEQVSHZyZo2EteXhStkuiziIClWEas1iNmB7i8j7q8hZjrSxUpXE/QqW4gckwoKyvObaM6Zv6UDEyta2xd8ig9BSsXnk3Mgc+XzSdZosTLNnMoz4bXLKfJnbjxqIlI74JTF4jJPyQ2SFk4vDvut0/DzUpJnqfDyjVMP9nsy4/Wq6B1EAOFgLK2LhPZto6k2tW8s1oWjl+IkpTbQrLEzUNSDmkzR/1X5ArSmKWw4uVp5An0r4oSdvYIyo9iYc8880tLAdKI45raEQcaPEq+MwbAOyPA58CrptxF/ljGalW/uY2HZuNrUnMoOx5t2SVo/HvB7ORNFrhnwIA65J17EjCwCc8CW3fcf5UU+MkyrkpJp+mpgpGue84gN0AAP4cr8zml8CxoMjgKbZDdeYr0Ku3Ckk531KYkYA3dCpJ27FbitR/H6VGRjm12hq035LIxuKLtF0kseS5x2H7ZHDgkCpJsTjgs6LRh2eCM01DhwE9HGOSZCylfRmw7PLDY0R8RBYTzLGoVMSckyISswwitPFUeO0iNV0zia2SM0VoVQpaUQF6Xl6yvLAOtcwFU9g1VLTyKqSUxgjYRzPvSO1BRaLvUpj2jknjiS4d3xU8n0j4/qLYZqMXocJVpHLmO2wA1PerOKqw6q1oUxkz0RpXfIELilZg4HJCqBdjjnoOHPbPQfFKNkdenqr4KT7xw/b8UH2FGxA/NFllBH1aUDgquxCopUhXG2CndmVlxyf6ln9LvgnMRKswv3ZoncN7dPiCPfSky0WdM0ZKpXnlVD0xOwUiyMe2iHLUmkSs8dhZGb9B4WS04x4XNPxTmkjlkrQY516pwvqzpJXpSZ2SFFibCqXWUSTFZB2lcBDJzJRGlWRxslrUVrVVFYiBk0oV6XkbAdOWH+yGQfoKpLuamnfqTGLNPRZOIkt5PWvJajnOAJJ0BPksbCs3jajmfhfArbYcPUOeeqa9lkguaonUkIYqQtzCS/zXmCtZ8YcFjY7Z7xm0WPVK2WjjTLQbUuVo4HLz09aWw5q4PH7SETu3bDdiwRZGeXNdnFiQ9jXjRzQ4dxFhCMgZcXGmXLPrJKtfuyg8+z56e4IhlSWMPLXVM2SitmniC7gEo5z70rxT+HlD2h3MKsgC1GsVLTxWVtreDCW6jMd4zC3CPrRZ20mW1BoaMtmjg8b7SNrxo5oPoodKbWJ9m59x7oTp+NncT2h4Gj4rdlYgtoElTBuNq/tKUIciKFezI2m0GyNdfmkICtaSNZ0sRabVEBS8NGA5I0jqb1KDhtArYg2e5OkRnLQNgRw1UartTkCwCYYxDZmmGOpMmAjdXkb2ilNoGzcMRVTGmXPPehGzz9ELDQjtN+7Gf3EN+J9AUlhngUnNqwkxnM23teWvoSsIONLny3Z04Ko2Pb2ECSRLQvyQ5ZFC2zpitjD3dVMb7U4WcsjMraJBAzGYvTwPwTLS2Zu+2hJ+ZvP93qr8EXWSu1rqwU+z45mFr2Nc06hwsLPjwYga2IfhaKbfIaC+mi0sHiRm3nR+avNG09pwsA5d6k0CSd0zGcUJwtbsk+Zblly0WbjIfzAa68rGvjoVuIri0rPbMdQLeRvwP8ANpl7lnYaSnA8Dl8k5K5YlVso+RAnFhMNwEjswAB1J9yrLg3t4A9x+BQG4GDifu3NkGrDfePzDytdIHbwBGYIseKxsZHYKP8AZqa4twnOMlnhq30IQXYZK1Y45UDkxIxLytA6JidC8soQZW2KR24e80CQZ5KkSci+ENNvkvaqjsgG+JV2jJVXRzy7LtCsAqsRmrCloimIwgtZyR42pkKwns1KsvJqQDojEoEIQ48QaV/a3xpY1lTD9fwuc2hgTE4kC2cDy6FdC41+YnupBeB18UsopjRm4nLOxAQny2t+fZ0TtWeRr3JV2y4+RHipPGdKzIVwGI+7kYB2nCv/AB1y6obIXAE3VC9aNaJiTZzRmCbGeqzMZtX2QLX7xb4E5eXqtpdl8OZ3r0PFNTgV0MrPuR1on0K4aTbsJbvBsg5ZCveu09rbOhA9Qp2rOrLLk40Lz4pgqmgU0DrkNe9IY/G213SiPD+LUTRj9QHmfcgO3aOROos5DMVoPmncm1RRYYd9mXBj91xacvzN7jn77XXbHgD+3qAAR36r559sGuhZHK0G63T4i/ffmuw+wWOc7AxOcbLg6/8Ae4AeAACivyQyY/7RNzE4oAEAeP8ACyMRina2mfai3XWQJAPE8AkZ8Y/nf7aFd1Uq1aOjFjS8F8fPvt3gO1YaQON5D1rzWlsTYPst57nEufVt/KK0riT8libKm+96WDXcf7LrXYkC+J71KNXsnmx8XxiVmiZySsjWtzIBFULFgG+IQMbjDnWXclYMZvMLTnXuR5bJ5MLUbNaQx1e43PL8VcOPkEl92CDuMoEuJL7Bppyo6ZnxoJXZsUswIqqNFxyGRrvK9tHYEjRYk3qz3aoeCpFnFKFaGInRPk3TE2n5nt2OJq6FZAChXqs8bHwsLnvwjvu5HZsD3OjDwAXOY12bSd7POshQFFKwpmMqqZztBgrtVWKwyW9AGam4SlI01CmQGMb4UqilMA066q7ieSJ7H6CsKRAKl/QeaEXXwTjw1Bez6CxhdxPJBc7omC1AcDySsKBvzXI7bwoc7PQcF1zysXaOHsmlGSOjDKmcjj2ZVS7zBPuKN3ONh/4hctiNmF2q67ARj2MY5MaPIAKVUdqmtAJMOHWfoKkWDF5pxzFLQhbHeV1VnP8A2twIlhezm3LoRmD5pP8A6YTl2Ba3iySRh6dre/8AtdFjI7BWL9gsJ7M4pnD2++O57Gn3gpV2GMvlNvFxEHvSGJkcCHN7JAyrnzzW5OARXJIzYS9DSqmisc2tmDs6E77u4rYw05c3e8D3ojMIGNNanilcEac5niPj8FOtiyzcpcgeKkWfg327vv0/untoRVdghB2TgiLe4UM6tatlMk48Do9ivDY8yBmczfNL7WxwBG6bGhPXosGaYteGudUbv/bl9clO0HgMAa7MvbQ45anuVltHDNLsLiGU6+Ds/mvNCI+iwHkqtCc4ZdhWIozHVDjCKAixSY07ElGpuFMhWFteVsl5NZjVjeeZRHE969uj+6gMo/i9UQAnvPJBc7om5HDil3vCxgddVR7Oqu6Too3ui1GF3tCUnZmnHEkoc0dhSkisXTE/YdE3C2mhehCu9RZ0pkikGRCdLSSxOMKnZQcmeKOay/s3KP8AETt/UGOHgXA+8JabFuKFsXs4kO5gtPUEE15hD0daTOukCHSI51obskWDkUl0WDizuytd1HkcltucsXbRy+uCNaFi9nQcEvKbUYCXejaei9K5EWzF2xhd9jgNdRWtjMUsvBwccyeZJJ9V0ctWs6NlZKkeiUp1oKDTK5q0Wiq5qJAmuyLCNCMxCRWoilmhNxBL0mYfemiBhaXlbNQmAaAcdbVT3q7mrzWWmFBEKpamvZZfi9FU7q1MIqQpPejlwUADWkaZrB+zoITjaK42envUFLQbFnCj3oOKJTUzbHVKTm1CcaZ0Y5WhKRxWdidU7M5Zsz7U6L2CeAhbNxQGMjjd+YOI8GlEak8BBvbQhP6WSn/ju/FK+ykaad/Y7Z70rNiq4omIasLGtJOpHijRNMam2hyWbtF5McjuTXH0Qmx959fejY5lYeT+g+5OogumNbDxu7EAeSNNiydFm7OZbB3JpsKKiJKW2MYYkoTUzG2ggtam6Iydl2i15mRV4wvSNzBQFCKwVWIjQnQArEywZIEYTERzTIUvvKVb2ahGjGsGc/IKQ2unTVSwqSL0804BeRx5odFMvDWoTpkQFGtPJVkdwVXy3oo3UrYSLXmq7WLzsh1WMDKzZnarQ4pbH4exvDUapMitFMcqZj4nQrO3SVouNqvswOC5zqM5zSibDi/1JfyjI/3OHyTD2DuRtiQkOe6taruz+aDQeVJmjinLFxeZWni3LKe4WnSEukCihzRdsN+4cOYr4K8TwrYkbzd3mnE5bsWwGTR3JgyhLiEjJWZh3HglsLoYD7Rd1UhjpGAWJNnmKzwpaFekQFY2o7WqsYzTAZV+adCtktaiAKKRGhEBbfXkbdC8jRh4GtSFV05rIZcz8ENsXHUqfZE9/oE4AZPH+57lAiJ1yHJM0G56nn8ku5xcUDEE8AERkVoscO6OvuRSKFo0ADKKCVLrTMmQ6n6CXcKWAgbRxKtvULUyN0CmZuXggEzcRgWuzGR9PJIybOd+sV4rcjb9dyXnapygmVjkaM2PBtGudc/kjsNWrVkhkJGgqWxXEZpCaIDitOeA8Ei/BPPFLRXkhIHqnsIw6lWi2dWZNplrURZST6AgZojQpDVNLImUa1XAUtaiNYmoxXdVwFdjcwrBmayQCIRmnN3LuyQ4Y9QmQMu8J0KwAGYRwzLzCDHqE9E22nrn4ooAuvI+6vIgP//Z" alt="เล็บชมพูหรู">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMi4lPOb8IUEbH7yQUUo-oIGcKT5dVs3rWFg&s" alt="เล็บกลิตเตอร์หรู">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcPUcrozs8IVCDHogwjFvqkmTWNZtobTgjRw&s" alt="เล็บมินิมอลหรู">
+      </div>
+      <div class="highlight">
+        เคล็ดลับ: เลือกสีเล็บที่เข้ากับโทนผิว จะช่วยให้มือดูขาวและเรียวยิ่งขึ้น!
+      </div>
+      <p>
+        ลายเล็บแบบ French Tip, Ombre หรือ Minimal ก็ยังคงได้รับความนิยมอย่างต่อเนื่อง เหมาะกับทุกโอกาสและทุกสไตล์การแต่งตัว
+      </p>
+      <p>
+        อย่าลืมดูแลสุขภาพเล็บด้วยการบำรุงด้วยออยล์และครีมบำรุงเล็บเป็นประจำ เพื่อให้เล็บแข็งแรงและสวยงามอยู่เสมอ
+      </p>
+      <!-- เพิ่มเทรนด์เล็บอีก 3 เทรนด์ -->
+      <div class="highlight" style="background: #f3e6fa; border-left: 4px solid #b388ff; color: #5e35b1;">
+        <b>เทรนด์เล็บ 2025 เพิ่มเติม</b>
+        <ul style="margin: 12px 0 0 18px; padding: 0; font-size: 1rem;">
+          <li><b>1. เล็บลายศิลปะ (Art Nails):</b> ลายเส้นกราฟิก สีตัดกัน หรือวาดลายศิลป์ลงบนเล็บ เพิ่มความโดดเด่นและความสนุก</li>
+          <li><b>2. เล็บโฮโลแกรม/เมทัลลิค:</b> เล็บสะท้อนแสงหรือสีเมทัลลิค ให้ลุคทันสมัยและดูหรูหรา</li>
+          <li><b>3. เล็บธรรมชาติ (Natural Look):</b> เล็บโทนใสหรือสีเบจ ดูสะอาด สุขภาพดี เหมาะกับทุกวัน</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="recommend">
+      <img src="https://img.bestdealplus.com/ae04/kf/S52f302d0079e4136922029bb03ea04a82.jpg" alt="แนะนำเล็บกลิตเตอร์">
+      <div class="recommend-content">
+        <div class="recommend-title">แนะนำ! ลายเล็บกลิตเตอร์หรู</div>
+        <div>ลายเล็บกลิตเตอร์โทนชมพูและขาวมุก เพิ่มความหรูหราและดูสะอาดตา เหมาะกับทุกโอกาสและทุกวัย</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
