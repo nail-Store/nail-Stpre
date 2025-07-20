@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Nail.Store</title>
+    <!-- เปลี่ยนฟอนต์เป็น 'Sarabun' และ 'Prompt' ที่ดูทันสมัย -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
         body {
-            font-family: 'Prompt', sans-serif;
+            font-family: 'Sarabun', 'Prompt', Arial, sans-serif;
             background: linear-gradient(135deg, #f8fbff 0%, #e3f7ff 100%);
             margin: 0;
+        }
+        .site-title, h1, h2, h3, .brand-highlight, .reviews-title {
+            font-family: 'Prompt', 'Sarabun', Arial, sans-serif;
+            letter-spacing: 1.5px;
         }
         header {
             background: #fff;
@@ -102,24 +107,83 @@
             box-shadow: none;
             padding: 0;
             overflow: visible;
+            position: relative;
+        }
+        .hero-welcome-bg {
+            width: 100%;
+            background: linear-gradient(120deg, #e3f7ff 60%, #fafdff 100%);
+            border-radius: 32px;
+            box-shadow: 0 8px 32px #b3e5fc33;
+            padding: 38px 28px 28px 28px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
         }
         .hero-text {
             text-align: center;
-            margin-bottom: 32px;
+            position: relative;
+            z-index: 2;
         }
         .hero-text h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             color: #0099cc;
             font-weight: bold;
-            margin-bottom: 16px;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 12px #e3f7ff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 18px #e3f7ff, 0 1px 0 #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
-        .hero-text p {
-            font-size: 1.18em;
+        .brand-highlight {
+            color: #66CCFF;
+            text-shadow: 0 2px 12px #e3f7ff, 0 1px 0 #fff;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+        .welcome-emoji {
+            font-size: 1.1em;
+            filter: drop-shadow(0 2px 8px #e3f7ff88);
+        }
+        .welcome-divider {
+            width: 120px;
+            height: 6px;
+            background: linear-gradient(90deg,#66ccff,#2299dd 80%);
+            border-radius: 3px;
+            margin: 18px auto 24px auto;
+            opacity: 0.7;
+            box-shadow: 0 2px 8px #66ccff33;
+        }
+        .welcome-desc {
+            font-size: 1.22em;
             color: #1976d2;
-            line-height: 1.7;
-            margin-bottom: 0;
+            line-height: 2.1;
+            margin-bottom: 22px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 8px #e3f7ff55;
+        }
+        .welcome-icon {
+            font-size: 1.1em;
+            margin-right: 4px;
+        }
+        .welcome-btn {
+            display: inline-block;
+            background: linear-gradient(90deg,#66ccff 60%,#0099cc 100%);
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 12px 28px;
+            border-radius: 28px;
+            margin-top: 12px;
+            text-decoration: none;
+            box-shadow: 0 4px 16px #66CCFF44;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .welcome-btn:hover {
+            background: linear-gradient(90deg,#0099cc 60%,#66ccff 100%);
+            transform: translateY(-2px);
         }
         .hero-img {
             display: flex;
@@ -181,6 +245,99 @@
             box-shadow: 0 -2px 16px #b3e5fc44;
             margin-top: 40px;
         }
+        /* รีวิวลูกค้า */
+        .reviews-section {
+            max-width: 900px;
+            margin: 56px auto 0 auto;
+            background: linear-gradient(120deg, #fafdff 60%, #e0f7ff 100%);
+            border-radius: 32px;
+            box-shadow: 0 8px 32px #b3e5fc33;
+            padding: 36px 28px 28px 28px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #e3f7ff;
+        }
+        .reviews-title {
+            text-align: center;
+            font-size: 2em;
+            color: #0099cc;
+            font-weight: bold;
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 12px #e3f7ff;
+        }
+        .reviews-list {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .review-card {
+            background: #fff;
+            border-radius: 22px;
+            box-shadow: 0 4px 18px #b3e5fc33;
+            padding: 26px 22px 20px 22px;
+            width: 290px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 2px solid #e3f7ff;
+            transition: transform 0.18s, box-shadow 0.18s;
+            position: relative;
+        }
+        .review-card:hover {
+            transform: translateY(-8px) scale(1.04) rotate(-1deg);
+            box-shadow: 0 8px 32px #66CCFF99;
+            border-color: #66CCFF;
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+        .review-avatar {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #66CCFF;
+            box-shadow: 0 2px 8px #b3e5fc44;
+            background: #e3f7ff;
+        }
+        .review-name {
+            font-weight: bold;
+            color: #0099cc;
+            font-size: 1.15em;
+            margin-bottom: 2px;
+        }
+        .review-stars {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 1.18em;
+            margin-top: 2px;
+        }
+        .star {
+            color: #FFD700;
+            text-shadow: 0 1px 4px #ffe06699;
+            font-size: 1.18em;
+        }
+        .review-score {
+            color: #1976d2;
+            font-size: 0.98em;
+            margin-left: 6px;
+            font-weight: bold;
+        }
+        .review-text {
+            color: #1976d2;
+            font-size: 1.08em;
+            margin-top: 8px;
+            line-height: 1.7;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
         @media (max-width: 1100px) {
             .header-inner, .hero, .services { max-width: 98vw; padding-left: 10px; padding-right: 10px;}
         }
@@ -189,6 +346,8 @@
             .hero { padding: 24px 10px; }
             .hero-img { margin-bottom: 18px; }
             .services { gap: 18px; }
+            .reviews-list { flex-direction: column; gap: 18px; align-items: center; }
+            .review-card { width: 98%; }
         }
         @media (max-width: 600px) {
             .header-inner { flex-direction: column; align-items: flex-start; padding: 18px 6px; }
@@ -202,20 +361,11 @@
     <header>
         <div class="header-inner">
             <div class="header-left">
-                <div class="logo-nail">
-                    <!-- SVG โลโก้ทำเล็บ -->
-                    <svg viewBox="0 0 48 48" width="38" height="38">
-                        <ellipse cx="24" cy="24" rx="22" ry="22" fill="#66CCFF" opacity="0.13"/>
-                        <rect x="21" y="8" width="6" height="24" rx="3" fill="#fff" stroke="#0099cc" stroke-width="2"/>
-                        <rect x="24" y="12" width="1.5" height="16" rx="0.75" fill="#66CCFF"/>
-                        <rect x="16" y="28" width="16" height="6" rx="3" fill="#fff" stroke="#0099cc" stroke-width="2"/>
-                        <rect x="19" y="31" width="10" height="2" rx="1" fill="#66CCFF"/>
-                        <!-- แหนบ -->
-                        <rect x="12" y="14" width="3" height="16" rx="1.5" fill="#fff" stroke="#0099cc" stroke-width="2"/>
-                        <rect x="33" y="14" width="3" height="16" rx="1.5" fill="#fff" stroke="#0099cc" stroke-width="2"/>
-                        <rect x="13" y="16" width="1" height="12" rx="0.5" fill="#66CCFF"/>
-                        <rect x="34" y="16" width="1" height="12" rx="0.5" fill="#66CCFF"/>
-                    </svg>
+                <div class="logo-nail" style="background:none; box-shadow:none; border:none;">
+                    <!-- โลโก้แบบไม่มีขอบวงกลม -->
+                    <img src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-2758-61f5-9f2c-8bf12bb70202/raw?se=2025-07-20T09%3A28%3A21Z&sp=r&sv=2024-08-04&sr=b&scid=fd2f0f94-ca4f-578b-b11a-88bf0ac63bfe&skoid=b0fd38cc-3d33-418f-920e-4798de4acdd1&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-19T11%3A30%3A45Z&ske=2025-07-20T11%3A30%3A45Z&sks=b&skv=2024-08-04&sig=VTonIzWXcIyU4lcLMNH9Dq1dN6YMaI9Q4dPZB9MYbJs%3D"
+                         alt="Nail.Store Logo"
+                         style="width: 54px; height: 54px; object-fit: cover;">
                 </div>
                 <div>
                     <div class="site-title">Nail.Store</div>
@@ -231,23 +381,32 @@
             </nav>
         </div>
     </header>
-    <section class="hero" style="max-width: 1100px; margin: 36px auto 0 auto; display: flex; flex-direction: column; align-items: center; background: none; border-radius: 0; box-shadow: none; padding: 0; overflow: visible;">
-        <!-- ข้อความด้านบนตรงกลาง -->
-        <div class="hero-text" style="text-align: center; margin-bottom: 32px;">
-            <h1 style="font-size: 2.5em; color: #0099cc; font-weight: bold; margin-bottom: 16px; letter-spacing: 1px; text-shadow: 0 2px 12px #e3f7ff;">
-                ✨💅 ยินดีต้อนรับสู่ <span style="color:#66CCFF;">Nail.Store</span> 💎✨
-            </h1>
-            <p style="font-size: 1.18em; color: #1976d2; line-height: 1.7; margin-bottom: 0;">
-                👑 บริการทำเล็บมือ-เท้า ต่อเล็บ เพ้นท์เล็บ ด้วยช่างมืออาชีพ<br>
-                🌸 สัมผัสประสบการณ์ความสวยหรูหราในบรรยากาศสบายๆ 🌸
-            </p>
+    <section class="hero">
+        <div class="hero-welcome-bg">
+            <div class="hero-text">
+                <h1>
+                    <span class="welcome-emoji">✨💅</span>
+                    <span class="welcome-main">ยินดีต้อนรับสู่ <span class="brand-highlight">Nail.Store</span></span>
+                    <span class="welcome-emoji">💎✨</span>
+                </h1>
+                <div class="welcome-divider"></div>
+                <p class="welcome-desc">
+                    <span class="welcome-icon">👑</span> สัมผัสประสบการณ์ความสวยหรูหราในบรรยากาศสบายๆ<br>
+                    <span class="welcome-icon">🌸</span> บริการทำเล็บมือ-เท้า ต่อเล็บ เพ้นท์เล็บ ด้วยช่างมืออาชีพ<br>
+                    <span class="welcome-icon">🎨</span> ดีไซน์ลายเล็บสุดชิค สีสันสดใส เลือกได้ไม่ซ้ำใคร<br>
+                    <span class="welcome-icon">🛡️</span> ปลอดภัยด้วยอุปกรณ์สะอาดและผลิตภัณฑ์คุณภาพสูง<br>
+                    <span class="welcome-icon">⭐</span> รีวิวลูกค้าดีเยี่ยม การันตีความประทับใจ!
+                </p>
+                <a href="Product.html" class="welcome-btn">ดูบริการทั้งหมด</a>
+            </div>
+            <div class="hero-bubble bubble1"></div>
+            <div class="hero-bubble bubble2"></div>
+            <div class="hero-bubble bubble3"></div>
         </div>
-        <!-- รูปภาพตรงกลาง (ขนาดพอดีหน้าจอ, ขอบมน, สไตล์มินิมอลหรูหรา) -->
-        <div class="hero-img" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+        <div class="hero-img">
             <img 
                 src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-aa58-61f7-8946-d0c32af53c34/raw?se=2025-07-20T07%3A58%3A24Z&sp=r&sv=2024-08-04&sr=b&scid=e2c9db4f-cae4-5b60-8ab2-61cacdf23907&skoid=c953efd6-2ae8-41b4-a6d6-34b1475ac07c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-20T01%3A21%3A09Z&ske=2025-07-21T01%3A21%3A09Z&sks=b&skv=2024-08-04&sig=EioiF7U9Xz2GqH3zWrnbQMAlxJ2cgfKJl/3SFRuIwTM%3D" 
                 alt="Minimal Luxury Nail Salon"
-                style="width: 100%; max-width: 1440px; aspect-ratio: 16/9; border-radius: 40px; box-shadow: 0 8px 32px #b3e5fc55; object-fit: cover; min-height: 540px; background: #f8fbff; height: auto;"
             >
         </div>
     </section>
@@ -263,6 +422,128 @@
         <div class="service">
             <h3>สปามือ-เท้า</h3>
             <p>ผ่อนคลายด้วยสปามือและเท้า</p>
+        </div>
+    </section>
+
+    <!-- รีวิวลูกค้า -->
+    <section class="reviews-section">
+        <h2 class="reviews-title">รีวิวจากลูกค้า</h2>
+        <div class="reviews-list">
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="ลูกค้า" class="review-avatar">
+                    <div>
+                        <div class="review-name">คุณแนน</div>
+                        <div class="review-stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="review-score">4.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-text">
+                    ร้านน่ารักมากค่ะ ช่างมือเบา ลายเล็บสวยถูกใจมาก จะกลับมาใช้บริการอีกแน่นอน!
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="ลูกค้า" class="review-avatar">
+                    <div>
+                        <div class="review-name">คุณบอส</div>
+                        <div class="review-stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="review-score">5.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-text">
+                    ประทับใจมากครับ ร้านสะอาด บริการดีมาก ผลงานออกมาสวยเกินคาด!
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="ลูกค้า" class="review-avatar">
+                    <div>
+                        <div class="review-name">คุณออย</div>
+                        <div class="review-stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="review-score">4.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-text">
+                    ชอบมากค่ะ สีเจลติดทนนาน ลายละเอียดสวยงาม ราคาสมเหตุสมผล
+                </div>
+            </div>
+            <!-- เพิ่มอีก 3 รีวิว -->
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="ลูกค้า" class="review-avatar">
+                    <div>
+                        <div class="review-name">คุณต้น</div>
+                        <div class="review-stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="review-score">5.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-text">
+                    บรรยากาศร้านดีมาก พนักงานเป็นกันเอง งานละเอียด ประทับใจสุดๆ ครับ
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="ลูกค้า" class="review-avatar">
+                    <div>
+                        <div class="review-name">คุณฟ้า</div>
+                        <div class="review-stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="review-score">3.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-text">
+                    ร้านสวย สะอาดดีค่ะ แต่วันนั้นลูกค้าเยอะ รอนานนิดหน่อย โดยรวมโอเคค่ะ
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="ลูกค้า" class="review-avatar">
+                    <div>
+                        <div class="review-name">คุณเจ</div>
+                        <div class="review-stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="review-score">4.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-text">
+                    ช่างแนะนำดีมากครับ เล็บออกมาสวยตรงใจ ราคาไม่แพงด้วย
+                </div>
+            </div>
         </div>
     </section>
     <footer>
