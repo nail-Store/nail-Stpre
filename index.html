@@ -1,1 +1,272 @@
-หน้าแรก
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Nail.Store</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+        body {
+            font-family: 'Prompt', sans-serif;
+            background: linear-gradient(135deg, #f8fbff 0%, #e3f7ff 100%);
+            margin: 0;
+        }
+        header {
+            background: #fff;
+            box-shadow: 0 4px 24px #b3e5fc55;
+            padding: 0;
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 32px 18px 32px;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .logo-nail {
+            width: 68px;
+            height: 68px;
+            background: linear-gradient(135deg, #e3f7ff 60%, #fff 100%);
+            border-radius: 50%;
+            box-shadow: 0 2px 12px #b3e5fc88;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2.5px solid #66CCFF;
+        }
+        .site-title {
+            font-size: 2.4em;
+            font-weight: bold;
+            color: #0099cc;
+            letter-spacing: 2px;
+            margin: 0;
+            text-shadow: 0 2px 12px #e3f7ff, 0 1px 0 #fff;
+        }
+        .site-desc {
+            margin: 8px 0 0 0;
+            font-size: 1.15em;
+            color: #66CCFF;
+            letter-spacing: 1px;
+            font-weight: 500;
+            text-shadow: 0 1px 8px #e3f7ff;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+        nav a {
+            color: #0099cc;
+            background: #e3f7ff;
+            font-weight: bold;
+            font-size: 1.08em;
+            padding: 10px 26px;
+            border-radius: 24px;
+            margin: 0 2px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px #b3e5fc22;
+            border: 2px solid #66CCFF;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .menu-btn {
+            color: #0099cc;
+            background: #e3f7ff;
+            font-weight: bold;
+            font-size: 1.08em;
+            padding: 10px 26px;
+            border-radius: 24px;
+            margin: 0 2px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px #b3e5fc22;
+            border: 2px solid #66CCFF;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+        nav a:hover, .menu-btn:hover, nav a.active, .menu-btn.active {
+            background: #66CCFF;
+            color: #fff;
+            box-shadow: 0 4px 16px #66CCFF44;
+        }
+        .hero {
+            max-width: 1100px;
+            margin: 36px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            overflow: visible;
+        }
+        .hero-text {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .hero-text h1 {
+            font-size: 2.5em;
+            color: #0099cc;
+            font-weight: bold;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #e3f7ff;
+        }
+        .hero-text p {
+            font-size: 1.18em;
+            color: #1976d2;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        .hero-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .hero-img img {
+            width: 100%;
+            max-width: 1920px;
+            aspect-ratio: 16/9;
+            border-radius: 40px;
+            box-shadow: 0 8px 32px #b3e5fc55;
+            object-fit: cover;
+            min-height: 540px;
+            background: #f8fbff;
+            height: auto;
+        }
+        .services {
+            max-width: 1100px;
+            margin: 48px auto 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+            flex-wrap: wrap;
+        }
+        .service {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px #b3e5fc55;
+            padding: 28px 22px;
+            width: 240px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid #e3f7ff;
+        }
+        .service:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 32px #66CCFF99;
+            border-color: #66CCFF;
+        }
+        .service h3 {
+            color: #0099cc;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .service p {
+            color: #1976d2;
+        }
+        footer {
+            background: #e3f7ff;
+            color: #0099cc;
+            text-align: center;
+            padding: 18px 0;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            border-top: 1px solid #66CCFF;
+            box-shadow: 0 -2px 16px #b3e5fc44;
+            margin-top: 40px;
+        }
+        @media (max-width: 1100px) {
+            .header-inner, .hero, .services { max-width: 98vw; padding-left: 10px; padding-right: 10px;}
+        }
+        @media (max-width: 900px) {
+            .header-inner, .hero { flex-direction: column; align-items: flex-start; gap: 18px; }
+            .hero { padding: 24px 10px; }
+            .hero-img { margin-bottom: 18px; }
+            .services { gap: 18px; }
+        }
+        @media (max-width: 600px) {
+            .header-inner { flex-direction: column; align-items: flex-start; padding: 18px 6px; }
+            .hero { border-radius: 18px; padding: 12px 2vw; }
+            .hero-img img { border-radius: 14px; }
+            .site-title { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="header-left">
+                <div class="logo-nail">
+                    <!-- SVG โลโก้ทำเล็บ -->
+                    <svg viewBox="0 0 48 48" width="38" height="38">
+                        <ellipse cx="24" cy="24" rx="22" ry="22" fill="#66CCFF" opacity="0.13"/>
+                        <rect x="21" y="8" width="6" height="24" rx="3" fill="#fff" stroke="#0099cc" stroke-width="2"/>
+                        <rect x="24" y="12" width="1.5" height="16" rx="0.75" fill="#66CCFF"/>
+                        <rect x="16" y="28" width="16" height="6" rx="3" fill="#fff" stroke="#0099cc" stroke-width="2"/>
+                        <rect x="19" y="31" width="10" height="2" rx="1" fill="#66CCFF"/>
+                        <!-- แหนบ -->
+                        <rect x="12" y="14" width="3" height="16" rx="1.5" fill="#fff" stroke="#0099cc" stroke-width="2"/>
+                        <rect x="33" y="14" width="3" height="16" rx="1.5" fill="#fff" stroke="#0099cc" stroke-width="2"/>
+                        <rect x="13" y="16" width="1" height="12" rx="0.5" fill="#66CCFF"/>
+                        <rect x="34" y="16" width="1" height="12" rx="0.5" fill="#66CCFF"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="site-title">Nail.Store</div>
+                    <div class="site-desc">สวยครบ จบในที่เดียว</div>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html" class="menu-btn">หน้าแรก</a>
+                <a href="Product.html" class="menu-btn">บริการ</a>
+                <a href="article.html" class="menu-btn">บทความ</a>
+                <a href="about.html" class="menu-btn">เกี่ยวกับเรา</a>
+                <a href="contact.html" class="menu-btn">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero" style="max-width: 1100px; margin: 36px auto 0 auto; display: flex; flex-direction: column; align-items: center; background: none; border-radius: 0; box-shadow: none; padding: 0; overflow: visible;">
+        <!-- ข้อความด้านบนตรงกลาง -->
+        <div class="hero-text" style="text-align: center; margin-bottom: 32px;">
+            <h1 style="font-size: 2.5em; color: #0099cc; font-weight: bold; margin-bottom: 16px; letter-spacing: 1px; text-shadow: 0 2px 12px #e3f7ff;">
+                ✨💅 ยินดีต้อนรับสู่ <span style="color:#66CCFF;">Nail.Store</span> 💎✨
+            </h1>
+            <p style="font-size: 1.18em; color: #1976d2; line-height: 1.7; margin-bottom: 0;">
+                👑 บริการทำเล็บมือ-เท้า ต่อเล็บ เพ้นท์เล็บ ด้วยช่างมืออาชีพ<br>
+                🌸 สัมผัสประสบการณ์ความสวยหรูหราในบรรยากาศสบายๆ 🌸
+            </p>
+        </div>
+        <!-- รูปภาพตรงกลาง (ขนาดพอดีหน้าจอ, ขอบมน, สไตล์มินิมอลหรูหรา) -->
+        <div class="hero-img" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+            <img 
+                src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-aa58-61f7-8946-d0c32af53c34/raw?se=2025-07-20T07%3A58%3A24Z&sp=r&sv=2024-08-04&sr=b&scid=e2c9db4f-cae4-5b60-8ab2-61cacdf23907&skoid=c953efd6-2ae8-41b4-a6d6-34b1475ac07c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-20T01%3A21%3A09Z&ske=2025-07-21T01%3A21%3A09Z&sks=b&skv=2024-08-04&sig=EioiF7U9Xz2GqH3zWrnbQMAlxJ2cgfKJl/3SFRuIwTM%3D" 
+                alt="Minimal Luxury Nail Salon"
+                style="width: 100%; max-width: 1440px; aspect-ratio: 16/9; border-radius: 40px; box-shadow: 0 8px 32px #b3e5fc55; object-fit: cover; min-height: 540px; background: #f8fbff; height: auto;"
+            >
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="service">
+            <h3>ทำเล็บมือ</h3>
+            <p>ตัดแต่ง ทาสี เพ้นท์ลายสวยงาม</p>
+        </div>
+        <div class="service">
+            <h3>ต่อเล็บเจล</h3>
+            <p>ต่อเล็บเจลคุณภาพสูง ทนทาน</p>
+        </div>
+        <div class="service">
+            <h3>สปามือ-เท้า</h3>
+            <p>ผ่อนคลายด้วยสปามือและเท้า</p>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Nail.Store | โทร: 08x-xxx-xxxx | Line: @nailstore
+    </footer>
+</body>
+</html>
